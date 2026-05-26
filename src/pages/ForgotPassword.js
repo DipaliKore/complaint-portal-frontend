@@ -13,7 +13,7 @@ function ForgotPassword() {
     setLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/auth/forgot-password?email=${email}`
+        `http://complaint-portal-backend-production.up.railway.app/api/auth/forgot-password?email=${email}`
       );
       setMessage(res.data);
       setError('');

@@ -25,7 +25,7 @@ function ResetPassword() {
     setLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/auth/reset-password?token=${token}&newPassword=${newPassword}`
+        `http://complaint-portal-backend-production.up.railway.app/api/auth/reset-password?token=${token}&newPassword=${newPassword}`
       );
       setMessage(res.data);
       setError('');
