@@ -8,11 +8,8 @@ const authHeader = () => ({
     headers: { Authorization: `Bearer ${getToken()}` }
 });
 
-// Auth APIs
 export const register = (data) => axios.post(`${API_URL}/auth/register`, data);
 export const login = (data) => axios.post(`${API_URL}/auth/login`, data);
-
-// Complaint APIs
 export const submitComplaint = (data) => axios.post(`${API_URL}/complaints/submit`, data, authHeader());
 export const getMyComplaints = () => axios.get(`${API_URL}/complaints/my`, authHeader());
 export const getAllComplaints = () => axios.get(`${API_URL}/complaints/all`, authHeader());
