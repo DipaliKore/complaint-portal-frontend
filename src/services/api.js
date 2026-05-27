@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://complaint-portal-backend-production.up.railway.app/api';
+const API_URL = 'https://complaint-portal-backend-production-5195.up.railway.app/api';
 
 const getToken = () => localStorage.getItem('token');
 

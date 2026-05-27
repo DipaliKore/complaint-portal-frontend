@@ -58,7 +58,7 @@ function Dashboard() {
       formData.append('category', category);
       if (file) formData.append('file', file);
 
-      await axios.post('http://complaint-portal-backend-production.up.railway.app/api/complaints/submit', formData, {
+      await axios.post('http://localhost:8080/api/complaints/submit', formData, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data'
@@ -186,7 +186,7 @@ function Dashboard() {
                 <p style={styles.complaintDesc}>{c.description}</p>
                 {c.filePath && (
                   <img
-                    src={`http://complaint-portal-backend-production.up.railway.app/uploads/${c.filePath}`}
+                    src={`http://localhost:8080/uploads/${c.filePath}`}
                     alt="complaint"
                     style={styles.image}
                   />
