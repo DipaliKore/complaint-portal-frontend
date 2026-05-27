@@ -58,7 +58,7 @@ function Dashboard() {
       formData.append('category', category);
       if (file) formData.append('file', file);
 
-      await axios.post('http://localhost:8080/api/complaints/submit', formData, {
+      await axios.post('https://complaint-portal-backend-production-5195.up.railway.app/api/complaints/submit', formData, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data'
