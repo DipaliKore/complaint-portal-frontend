@@ -14,7 +14,7 @@ function Register() {
     e.preventDefault();
     try {
       await register({ name, email, password });
-      setSuccess('Registration successful! Login now');
+      setSuccess('Registration successful! Login karo.');
       setTimeout(() => navigate('/login'), 2000);
     } catch (err) {
       setError('Registration failed! Email already exists.');
@@ -56,7 +56,7 @@ function Register() {
           <button style={styles.button} type="submit">Register</button>
         </form>
         <p style={styles.link}>
-          Already have an account? <Link to="/login">Login here</Link>
+          Already account hai? <Link to="/login">Login karo</Link>
         </p>
       </div>
     </div>
